@@ -1,16 +1,12 @@
 //import react into the bundle
-import React from 'react'
-import {createRoot} from 'react-dom/client'
+import React from "react";
+import ReactDOM from "react-dom";
 
-//include your index.scss file into the bundle
+// include your styles into the webpack bundle
 import "../styles/index.css";
 
-//import your own components
-import Layout from './layout.js'
-
-//
-const root = createRoot(document.querySelector("#app"))
+import Router from './component/Router.jsx'
+import Home from './component/home.jsx'
 
 //render your react application
-root.render(<Layout/>)
-
+ReactDOM.render(<Router />, document.querySelector("#app"));
